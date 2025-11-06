@@ -1,0 +1,362 @@
+/* Глобальні налаштування та змінні */
+:root {
+    --primary-color: #007bff;  /* Синій для Замовника */
+    --secondary-color: #28a745; /* Зелений для Черганта */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --background-color: #ffffff;
+    --container-width: 960px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Навігація */
+.navbar {
+    background: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Головний екран */
+.hero {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+/* Секція "Як це працює" */
+.how-it-works {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.how-it-works h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 15px;
+}
+
+/* Кнопки "Заклик до дії" (CTA) */
+.cta-buttons {
+    display: flex;
+    gap: 30px;
+    padding: 2rem 0 4rem 0;
+}
+
+.cta-box {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.cta-box h4 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: #1e7e34;
+}
+
+/* Підвал */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--light-color);
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+/* --- Стилі для сторінки Тарифів (tariffs.html) --- */
+
+.page-header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--light-color);
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.tariffs-grid {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 3rem;
+}
+
+.tariff-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.tariff-card h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tariff-card .price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.tariff-card .coin {
+    color: #f0b90b; /* Золотий колір монети */
+}
+
+/* Картка Замовника */
+.customer-card h3 {
+    color: var(--primary-color);
+}
+.customer-card .price {
+    background: rgba(0, 123, 255, 0.05);
+    color: var(--primary-color);
+}
+
+/* Картка Черганта */
+.queuer-card h3 {
+    color: var(--secondary-color);
+}
+.queuer-card .price-option {
+    margin-bottom: 1.5rem;
+}
+.queuer-card .price-option h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.queuer-card .price-option .price {
+    background: rgba(40, 167, 69, 0.05);
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+.queuer-card .price-option.verified .price {
+    background: rgba(40, 167, 69, 0.15);
+    font-size: 2.5rem; /* Робимо верифіковану ціну більшою */
+}
+
+.tariff-card .details {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+.tariff-card .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    box-sizing: border-box; /* Щоб паддінг не ламав ширину */
+}
+/* --- Стилі для сторінки Правил (rules.html) --- */
+.rules-page {
+    max-width: 800px; /* Робимо текст правил вужчим для легкого читання */
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.rule-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #eee;
+}
+
+.rule-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.rule-item ol {
+    padding-left: 20px;
+}
+
+/* --- Стилі для Форм (login, register) --- */
+.form-container {
+    max-width: 450px;
+    margin: 2rem auto 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.form-container p {
+    text-align: center;
+    color: #555;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Важливо для правильної ширини */
+}
+
+.form-container .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0 !important; /* Перевизначити стиль */
+    color: #333 !important;
+}
+
+.form-switch a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.form-switch a:hover {
+    text-decoration: underline;
+}
